@@ -1,0 +1,13 @@
+{
+  "name": "payconfirm",
+  "version": "1.0.0",
+  "description": "Self-hosted UPI payment confirmation: unique-amount QR + bank SMS/notification detection + signed webhooks. Zero dependencies.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node --disable-warning=ExperimentalWarning server.js",
+    "test": "node --disable-warning=ExperimentalWarning test.js"
+  },
+  "engines": { "node": ">=22.5.0" },
+  "license": "UNLICENSED",
+  "private": true
+}

@@ -1,0 +1,15 @@
+# Linux VPS: copy to /etc/systemd/system/payconfirm.service (edit User and paths), then:
+#   sudo systemctl daemon-reload && sudo systemctl enable --now payconfirm
+[Unit]
+Description=PayConfirm
+After=network-online.target
+
+[Service]
+User=payconfirm
+WorkingDirectory=/opt/payconfirm
+ExecStart=/usr/bin/node --disable-warning=ExperimentalWarning server.js
+Restart=always
+RestartSec=3
+
+[Install]
+WantedBy=multi-user.target
